@@ -1,0 +1,30 @@
+{
+  "name": "arrowsgm/nova-phpinfo",
+  "description": "A Laravel Nova PHP info tool.",
+  "keywords": [
+    "laravel",
+    "nova"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.2.0",
+    "laravel/nova": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Arrowsgm\\NovaPhpinfo\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Arrowsgm\\NovaPhpinfo\\ToolServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
