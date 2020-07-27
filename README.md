@@ -1,4 +1,4 @@
-Laravel Nova tool to viwe PHP info
+Laravel Nova tool to view PHP info
 ========================================
 ## Installation
 
