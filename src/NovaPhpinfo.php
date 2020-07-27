@@ -15,7 +15,7 @@ class NovaPhpinfo extends Tool
     public function boot()
     {
         Nova::script('nova-phpinfo', __DIR__.'/../dist/js/tool.js');
-        Nova::style('nova-phpinfo', __DIR__.'/../dist/css/tool.css');
+//        Nova::style('nova-phpinfo', __DIR__.'/../dist/css/tool.css');
 
         Nova::provideToScript([
             'nova-phpinfo' => $this->phpInfo(),
@@ -36,9 +36,9 @@ class NovaPhpinfo extends Tool
     {
         ob_start();
         phpinfo();
-        $pinfo = ob_get_contents();
+        $info = ob_get_contents();
         ob_end_clean();
-        $pinfo = preg_replace( '%^.*<body>(.*)</body>.*$%ms','$1',$pinfo);
-        return $pinfo;
+        $info = preg_replace( '%^.*<body>(.*)</body>.*$%ms','$1',$info);
+        return $info;
     }
 }
